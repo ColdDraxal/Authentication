@@ -30,3 +30,6 @@ def forget_password(request):
 
 def dashboard(request):
     return render(request, 'Dashboard/dashboard.html')
+
+def terms(request):
+    return render(request, 'terms.html')

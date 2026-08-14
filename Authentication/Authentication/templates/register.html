@@ -32,6 +32,8 @@
     <!-- Registration Container -->
     <div class="relative z-10 w-full max-w-md mx-4 p-8 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl transition-all duration-300 transform hover:scale-[1.01]">
         
+        {% block content %}
+
         <!-- Header -->
         <div class="text-center mb-8">
             <h2 class="text-3xl font-bold text-gray-900 tracking-tight">Create Account</h2>
@@ -72,7 +74,7 @@
             <div class="flex items-center text-sm pt-1">
                 <label class="flex items-center text-gray-600 cursor-pointer">
                     <input type="checkbox" required class="w-4 h-4 text-crimson border-gray-300 rounded focus:ring-crimson accent-crimson">
-                    <span class="ml-2">I agree to the <a href="#" class="text-crimson font-medium hover:underline">Terms & Conditions</a></span>
+                    <span class="ml-2">I agree to the <a href="{% url 'terms' %}" class="text-crimson font-medium hover:underline">Terms & Conditions</a></span>
                 </label>
             </div>
 
@@ -86,8 +88,9 @@
         <!-- Footer Link -->
         <p class="text-center text-sm text-gray-600 mt-6">
             Already have an account? 
-            <a href="#" class="text-crimson font-semibold hover:underline">Sign in</a>
+            <a href="{% url 'login' %}" class="text-crimson font-semibold hover:underline">Sign in</a>
         </p>
+        {% endblock %}
 
     </div>
 
