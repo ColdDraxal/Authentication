@@ -24,4 +24,10 @@ urlpatterns = [
     path('forget_password/', views.forget_password, name ="forget_password"),
     path('dashboard/', views.dashboard, name ="dashboard"),
     path('terms/', views.terms, name ="terms"),
+
+    #api
+    path('product/',views.products, name="product_list"),
+
+    #frontend
+    path('productpage/',views.product_page, name="product_page")
 ]
